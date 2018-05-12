@@ -1,14 +1,26 @@
-'use strict';
+(function() {
+  'use strict';
+  
+  //Modules
+  angular.module('Users', []);
+  angular.module('Repositories', []);
+  //Main Module
+  angular.module('App', [
+    'ngRoute',
+    'Users',
+    'Repositories'
+  ]).config(configuration);  
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+  configuration.$inject = ['$locationProvider', '$routeProvider'];
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  /**
+   * @name configuration
+   * @desc Angular configuration function
+   * @param {Object} $locationProvider 
+   * @param {Opject} $routeProvider
+   */
+  function configuration($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
+    $routeProvider.otherwise({redirectTo: '/users'});
+  }
+})();
