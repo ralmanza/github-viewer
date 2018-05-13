@@ -13,6 +13,8 @@
    */
   function repositoryCtrl($routeParams, userResource) {
     var vm = this;
+    vm.since = 0;
+    vm.limit = 12;
     vm.userName = $routeParams.userId;
     vm.repositories = [];
     vm.loadRepositoryByUser = loadRepositoryByUser;
