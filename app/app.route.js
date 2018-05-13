@@ -14,11 +14,13 @@
     $routeProvider
     .when("/users", {
       templateUrl: "user/user.html",
-      controller: 'UserCtrl'
+      controller: 'UserCtrl',
+      controllerAs: 'vm'
     })
     .when("/users/:userId/repositories", {
       templateUrl: "repository/repository.html",
-      controller: 'RepositoryCtrl'
+      controller: 'RepositoryCtrl',
+      controllerAs: 'vm'
     })
     .otherwise({
       redirectTo: '/users'
