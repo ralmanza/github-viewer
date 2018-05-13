@@ -1,0 +1,24 @@
+<div class="card border-dark mb-3 repository-card" style="width: 18rem; height:12rem;">
+  <div class="card-header" ng-bind="::repository.name"></div>
+  <div class="card-body" style="max-height:100px;">
+    <p class="card-text" ng-bind="::repository.description"></p>    
+  </div>
+  <div class="card-footer">
+    <span>
+      <a ng-href="{{::repository.html_url}}" target="_blank" class="card-link">
+        <i class="fa fa-home"
+           style="color:grey;"
+           data-toggle="tooltip"
+           title="Repository home page">Home</i>
+      </a>
+      <i class="fa fa-code-fork float-right" 
+         style="margin-right:5px;"
+         data-toggle="tooltip" 
+         title="Forks"> {{::repository.forks}}</i>
+      <i class="fa fa-info float-right"
+         style="margin-right:5px;"
+         data-toggle="tooltip"
+         title="Open Issues"> {{::repository.open_issues}}</i>
+    </span>
+  </div>
+</div>
