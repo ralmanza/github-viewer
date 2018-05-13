@@ -1,14 +1,17 @@
 (function() {
   'use strict';
-  
-  //Modules
+  //Commons module
+  angular.module('Commons', []);
+  //users module
   angular.module('Users', []);
+  //Repository module
   angular.module('Repositories', []);
   //Main Module
   angular.module('App', [
     'ngRoute',
     'Users',
-    'Repositories'
+    'Repositories',
+    'Commons'
   ]).config(configuration);  
 
   configuration.$inject = ['$locationProvider', '$routeProvider'];
