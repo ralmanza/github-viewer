@@ -1,0 +1,26 @@
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" 
+         aria-label="Previous" 
+         ng-click="navigateTo(currentPage - 1)">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item" 
+        ng-repeat="page in getPages() track by $index"
+        ng-class="{'active': currentPage === $index}">
+      <a class="page-link" 
+         ng-click="navigateTo($index)">{{::$index + 1}}</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link"
+         aria-label="Next"
+         ng-click="navigateTo(currentPage + 1)">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
