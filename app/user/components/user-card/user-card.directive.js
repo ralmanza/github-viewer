@@ -3,7 +3,7 @@
 
   angular
     .module('Users')
-    .directive('userCard', card);
+    .directive('gvUserCard', card);
 
   /**
    * @name card

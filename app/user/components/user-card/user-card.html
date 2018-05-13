@@ -1,7 +1,7 @@
 <center class="card user-card" style="width: 18rem;">
   <div class="card-body">
     <img ng-src="{{::user.avatar_url}}" alt="Avatar"/ > <br><br>
-    <h6 class="card-subtitle mb-2 text-muted" ng-bind="user.login"></h6>
+    <h6 class="card-subtitle mb-2 text-muted" ng-bind="::user.login"></h6>
     <a ng-href="{{::user.html_url}}" target="_blank" class="card-link">Github page</a>
     <a ng-href="#!/users/{{::user.login}}/repositories" class="card-link">Repositories</a>
   </div>
