@@ -1,1 +1,10 @@
-<div>Repo view</div>
+<div class="repository-view">
+  <div class="header alert alert-secondary"><h2>{{::vm.userName}}</h2></div>
+  <div class="list">
+    <gv-repository-card ng-repeat="repository in vm.repositories"
+      repository="::repository"
+      class="d-inline-block"
+      style="margin-right: 10px; margin-bottom:10px;">
+    </gv-repository-card>
+  </div>
+</div>
