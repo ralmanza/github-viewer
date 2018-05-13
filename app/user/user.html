@@ -1,11 +1,11 @@
 <div class="user-view">
   <div class="header alert alert-secondary"><h2>Github users list</h2></div>
   <div class="list">
-    <user-card ng-repeat="user in vm.users"
-      user="user" 
+    <gv-user-card ng-repeat="user in vm.users"
+      user="::user" 
       class="d-inline-block"
       style="margin-right: 10px; margin-bottom:10px;">
-    </user-card>
+    </gv-user-card>
   </div>  
   <div>
     <button type="button" 
